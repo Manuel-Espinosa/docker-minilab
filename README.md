@@ -39,6 +39,8 @@ Ejecuta el siguiente comando para detener los contenedores:
 ## Acerca de Docker MiniLab
 Este repositorio forma parte de un laboratorio experimental para la conferencia "FLISOL" en TESI IXTAPALUCA. El objetivo principal de este laboratorio es proporcionar una introducción práctica a Docker y cómo se pueden utilizar contenedores para desarrollar y desplegar aplicaciones.
 
+Sientete libre de usar esta plantilla para aprender mas del mundo de Docker.
+
 Si tienes alguna pregunta o problema, no dudes en crear un problema (issue) en este repositorio o contactar.
 
 ¡Gracias por participar!

@@ -1,0 +1,31 @@
+version: '3'
+services:
+  node-ms:
+    container_name: ${NODE_CONTAINER_NAME}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${NODE_PORT}:${NODE_PORT}
+    networks:
+      - backend
+    depends_on:
+      - mysql-ms
+
+  mysql-ms:
+    container_name: ${MYSQL_CONTAINER_NAME}
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: test
+    ports:
+      - ${MYSQL_PORT}:${MYSQL_PORT}
+    volumes:
+      - ./backup.sql:/docker-entrypoint-initdb.d/backup.sql
+    networks:
+      - backend
+
+networks:
+  backend:
+    external: true
+    name: ${DOCKER_NETWORK}

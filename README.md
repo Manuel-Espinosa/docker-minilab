@@ -8,7 +8,7 @@ Para comenzar, asegúrate de tener Docker y Docker Compose instalados en tu sist
 
 ### Paso 1: Clonar el Repositorio
 
-``` git clone https://github.com/tu-usuario/docker-minilab.git```
+```git clone https://github.com/tu-usuario/docker-minilab.git```
 
 ```cd docker-minilab```
 
@@ -20,7 +20,7 @@ Ejecuta los siguientes comandos para iniciar los contenedores:
 
 ```docker-compose build```
 
-```docker-compose up```
+```docker-compose up -d```
 
 Esto construirá y ejecutará los contenedores de acuerdo a la configuración definida en docker-compose.yml.
 

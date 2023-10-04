@@ -1,5 +1,6 @@
 version: '3'
 services:
+  #node-ms service
   node-ms:
     container_name: ${NODE_CONTAINER_NAME}
     build:
@@ -11,7 +12,7 @@ services:
       - backend
     depends_on:
       - mysql-ms
-
+  #mysql-ms service
   mysql-ms:
     container_name: ${MYSQL_CONTAINER_NAME}
     image: mysql:latest
@@ -21,10 +22,9 @@ services:
     ports:
       - ${MYSQL_PORT}:${MYSQL_PORT}
     volumes:
-      - ./backup.sql:/docker-entrypoint-initdb.d/backup.sql
+      - ./mysql.sql:/docker-entrypoint-initdb.d/backup.sql
     networks:
       - backend
-
 networks:
   backend:
     external: true

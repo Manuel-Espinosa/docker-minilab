@@ -18,6 +18,10 @@ Crea un archivo .env en la raíz del proyecto y define las variables de entorno 
 ### Paso 3: Iniciar los Contenedores
 Ejecuta los siguientes comandos para iniciar los contenedores:
 
+```docker network create backend```
+
+```docker network create lab-network```
+
 ```docker-compose build```
 
 ```docker-compose up -d```
@@ -27,9 +31,9 @@ Esto construirá y ejecutará los contenedores de acuerdo a la configuración de
 ### Paso 4: Acceder a la Aplicación
 Una vez que los contenedores estén en ejecución, puedes acceder a la aplicación en tu navegador web visitando:
 
-http://localhost:<puerto>
+http://localhost:PORT
 
-Reemplaza <puerto> con el puerto configurado en tu archivo .env o en el archivo docker-compose.yml.
+Reemplaza PORT con el puerto configurado en tu archivo .env o en el archivo docker-compose.yml.
 
 ### Paso 5: Detener los contenedores
 Ejecuta el siguiente comando para detener los contenedores:

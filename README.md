@@ -18,11 +18,15 @@ Crea un archivo .env en la raíz del proyecto y define las variables de entorno 
 ### Paso 3: Iniciar los Contenedores
 Ejecuta los siguientes comandos para iniciar los contenedores:
 
+  -Estos comandos solo son necesarios para inciar los contenedores la primer vez
+
 ```docker network create backend```
 
 ```docker network create lab-network```
 
 ```docker-compose build```
+
+ -Una vez construida la imagen del contenedor solo debes ejecutar el siguiente comando cada vez que quieras iniciar los contenedores
 
 ```docker-compose up -d```
 

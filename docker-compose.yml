@@ -12,6 +12,9 @@ services:
       - backend
     depends_on:
       - mysql-ms
+    volumes:
+      - .:/app/
+    command: "bash -c '$DOCKER_COMMAND'"
   #mysql-ms service
   mysql-ms:
     container_name: ${MYSQL_CONTAINER_NAME}

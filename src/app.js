@@ -1,5 +1,3 @@
-// app.js
-
 import express from "express";
 import { sequelize, User } from "./frameworks/db/sequelize.js";
 
@@ -47,7 +45,7 @@ app.get("/:user", async (req, res) => {
     });
 
     if (user) {
-      res.send(`Hello from MYSQL container ${user.name}`);
+      res.send(`Hello from MYSQL container ${user.name} your ID is ${user_id}`);
     } else {
       res.send("No users found :(");
     }
